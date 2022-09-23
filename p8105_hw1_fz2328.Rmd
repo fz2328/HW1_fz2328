@@ -41,12 +41,21 @@ We also made a scatterplot of their flipper length and bill length.
 ```
 
 
-## Including Plots
+## Problem 2
 
-You can also embed plots, for example:
+* First, we would create a data frame named `Problem_2`comprised of:
+    + a random sample of size 10 from a standard Normal distribution
+    + a logical vector indicating whether elements of the sample are greater than 0
+    + a character vector of length 10
+    + a factor vector of length 10, with 3 different factor “levels”
 
 ```{r pressure, echo=FALSE}
-plot(pressure)
+Problem_2 = tibble(
+                    random_sample = rnorm(10),
+                    vec_log = random_sample > 0,
+                    vec_char = "abcdefghijk",
+                    vec_factor = factor(c("a", "b", "c","a", "b", "c","a", "b", "c","a" )))
+                    
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
